@@ -16,6 +16,7 @@ while len(players) != 1:
     print("Player " + str(x))
   print("Player " + str(num) + ", you have the gun!")
   i2 = int(input("Who do you want to target the gun to? There are " + str(len(players)) +         " players\n"))
+  exists = i2 in players
   if i2 == num:
     rand = random.randint(1,6)
     if rand == 1:
@@ -23,8 +24,7 @@ while len(players) != 1:
       players.remove(num)
     else:
       print("You aimed the gun at yourself and shot but luckily, there was no bullet.")
-  exists = i2 in players
-  if exists == False:
+  elif exists == False:
     print("You can't kill a dead player u idiot")
   else:
     print("You are dueling " + str(i2))
