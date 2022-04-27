@@ -1,6 +1,8 @@
 import random
 import time
 
+# sui
+
 i1 = int(input('How many people are playing the game?\n'))
 
 players = []
